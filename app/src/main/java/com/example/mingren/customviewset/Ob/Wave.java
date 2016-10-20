@@ -9,6 +9,7 @@ import android.animation.TimeInterpolator;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.design.widget.CoordinatorLayout;
 import android.view.animation.LinearInterpolator;
 
 import java.util.List;
@@ -80,5 +81,6 @@ public class Wave {
         int blue = random.nextInt(190) + 30;
         int argb = Color.argb(alpha, red, green, blue);
         return argb;
+
     }
 }

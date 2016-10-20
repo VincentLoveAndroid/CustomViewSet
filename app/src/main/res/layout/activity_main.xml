@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context="com.example.mingren.customviewset.MainActivity">
+    tools:context=".MainActivity">
 
-    <!--<com.example.mingren.customviewset.view.ClockSurfaceView-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="300dp"-->
-    <!--android:layout_centerInParent="true" />-->
-    <com.example.mingren.customviewset.view.ScrollTabIndicatorView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_test"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.example.mingren.customviewset.view.ScrollTabIndicatorView>
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="192dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/cdl_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:collapsedTitleTextAppearance="@color/cardview_light_background"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="哈哈">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/girl"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:title="卡卡"
+                app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
