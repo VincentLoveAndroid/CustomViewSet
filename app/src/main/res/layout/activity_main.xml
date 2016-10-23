@@ -21,7 +21,6 @@
             android:id="@+id/cdl_test"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:collapsedTitleTextAppearance="@color/cardview_light_background"
             app:contentScrim="@color/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:title="哈哈">
