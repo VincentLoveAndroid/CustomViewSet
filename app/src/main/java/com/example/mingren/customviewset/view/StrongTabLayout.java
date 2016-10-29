@@ -22,5 +22,4 @@ public class StrongTabLayout extends TabLayout {
     public StrongTabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-
 }

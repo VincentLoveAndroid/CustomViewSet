@@ -25,9 +25,9 @@ public class WaveView extends View {
     private int mcx;
     private int mcy;
     private List<Wave> waveList = new CopyOnWriteArrayList<>();
-    private int invalideDuration = 16;//16ms刷新一次 相当于60fps
+    private int invalidateDuration = 16;//16ms刷新一次 相当于60fps
     private long lastPlayTime;//记录上次播放的时间
-    private TimeInterpolator mTimeInterplator=new LinearInterpolator();
+    private TimeInterpolator mTimeInterpolator =new LinearInterpolator();
 
     public WaveView(Context context) {
         super(context);
@@ -62,10 +62,10 @@ public class WaveView extends View {
         if (playWave) {
             if (waveList.isEmpty()) return;
             for (Wave wave : waveList) {
-                wave.setInterpolator(mTimeInterplator);
+                wave.setInterpolator(mTimeInterpolator);
                 wave.play(canvas, mPaint, mcx, mcy, waveList);
             }
-            postDelayed(waveRuunable, invalideDuration);
+            postDelayed(waveRunnable, invalidateDuration);
         }
     }
 
@@ -87,10 +87,10 @@ public class WaveView extends View {
 
     public void stopWave() {
         playWave = false;
-        removeCallbacks(waveRuunable);
+        removeCallbacks(waveRunnable);
     }
 
-    private Runnable waveRuunable = new Runnable() {
+    private Runnable waveRunnable = new Runnable() {
         @Override
         public void run() {
             invalidate();

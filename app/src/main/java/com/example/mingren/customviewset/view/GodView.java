@@ -40,12 +40,10 @@ public class GodView extends View {
 
     public GodView(Context context) {
         this(context, null);
-        // TODO Auto-generated constructor stub
     }
 
     public GodView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
-        // TODO Auto-generated constructor stub
     }
 
     public GodView(Context context, AttributeSet attrs, int defStyleAttr) {

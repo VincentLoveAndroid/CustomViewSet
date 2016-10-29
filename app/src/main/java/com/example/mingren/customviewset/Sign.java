@@ -12,11 +12,20 @@ public class Sign {
     public static List<String> list = new ArrayList<>();
 
 
-
     public static void main(String arg[]) {
 
         System.out.println(1 << 2);
         System.out.println(1 << 3);
         System.out.println(1 << 4);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @MyInfo
+    public void getName() {
+
     }
 }

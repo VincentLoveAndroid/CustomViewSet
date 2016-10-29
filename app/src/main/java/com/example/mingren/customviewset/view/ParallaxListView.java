@@ -37,8 +37,8 @@ public class ParallaxListView extends ListView {
         minHeaderHeight = mHeaderHeight;
     }
 
-    public void setmHeaderbg(ImageView mivHeaderbg) {
-        this.mIvHeaderBg = mivHeaderbg;
+    public void setHeaderBg(ImageView mIvHeaderBg) {
+        this.mIvHeaderBg = mIvHeaderBg;
     }
 
     @Override
@@ -64,17 +64,6 @@ public class ParallaxListView extends ListView {
         return super.overScrollBy(deltaX, deltaY, scrollX, scrollY, scrollRangeX, scrollRangeY, maxOverScrollX, maxOverScrollY, isTouchEvent);
     }
 
-    private void changeHeight(int height) {
-        mIvHeaderBg.getLayoutParams().height = height;
-        mIvHeaderBg.requestLayout();
-    }
-
-    private void playSpringAnimation() {
-        SpringAnimation springAnimation = new SpringAnimation(mIvHeaderBg.getHeight(), mIvHeaderBg);
-        springAnimation.setDuration(500);
-        mIvHeaderBg.startAnimation(springAnimation);
-    }
-
     @Override
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
@@ -87,6 +76,17 @@ public class ParallaxListView extends ListView {
             parent.layout(getLeft(), 0, getLeft() + parent.getWidth(), getHeight());
             mIvHeaderBg.requestLayout();
         }
+    }
+
+    private void changeHeight(int height) {
+        mIvHeaderBg.getLayoutParams().height = height;
+        mIvHeaderBg.requestLayout();
+    }
+
+    private void playSpringAnimation() {
+        SpringAnimation springAnimation = new SpringAnimation(mIvHeaderBg.getHeight(), mIvHeaderBg);
+        springAnimation.setDuration(500);
+        mIvHeaderBg.startAnimation(springAnimation);
     }
 
     @Override
