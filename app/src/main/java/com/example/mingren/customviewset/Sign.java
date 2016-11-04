@@ -1,5 +1,9 @@
 package com.example.mingren.customviewset;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.widget.ImageView;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -10,13 +14,13 @@ import java.util.List;
 public class Sign {
 
     public static List<String> list = new ArrayList<>();
-
+    static String[] a = new String[2];
 
     public static void main(String arg[]) {
 
-        System.out.println(1 << 2);
-        System.out.println(1 << 3);
-        System.out.println(1 << 4);
+        for(int i=0, j=100;i<j;i++,j--){
+            System.out.println(i+" "+j);
+        }
     }
 
     @Override
@@ -26,6 +30,7 @@ public class Sign {
 
     @MyInfo
     public void getName() {
+        Bitmap bitmap = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
 
     }
-}
+}   
