@@ -42,4 +42,5 @@ public class ImageActivity extends Activity {
     public void ndk(View view) {
 
     }
+
 }
