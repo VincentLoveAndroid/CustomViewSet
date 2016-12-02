@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.text.InputFilter;
 import android.util.AttributeSet;
@@ -22,7 +23,7 @@ import java.lang.reflect.Field;
 /**
  * Created by vincent on 2016/11/29.
  * email-address:674928145@qq.com
- * description:
+ * description:访支付宝密码输入控件
  */
 
 public class PayEditText extends EditText {
@@ -48,8 +49,6 @@ public class PayEditText extends EditText {
 
     private int mTextLength;//当前文本长度
 
-    private long startTime;
-
     private int maxLength;
 
     private int mStartX;
@@ -73,7 +72,6 @@ public class PayEditText extends EditText {
         mDividerPaint = PaintUtil.getDefaultPaint();
         mCirclePaint = PaintUtil.getDefaultPaint();
         mCirclePaint.setStyle(Paint.Style.FILL_AND_STROKE);
-
 
         circleAnimation = new CircleAnimation();
         circleAnimation.setDuration(300);
@@ -189,7 +187,6 @@ public class PayEditText extends EditText {
             Toast.makeText(getContext(), "你输入的密码是" + text, Toast.LENGTH_SHORT).show();
         }
 
-
         Log.i(TAG, "onTextChanged: mTextLength" + mTextLength);
 
     }
@@ -200,7 +197,7 @@ public class PayEditText extends EditText {
         protected void applyTransformation(float interpolatedTime, Transformation t) {
             super.applyTransformation(interpolatedTime, t);
             mInterpolatedTime = interpolatedTime;
-            //postInvalidate();//及时刷新
+            postInvalidate();//及时刷新
             Log.i(TAG, "applyTransformation: " + mInterpolatedTime);
         }
     }

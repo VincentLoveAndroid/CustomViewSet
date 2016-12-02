@@ -16,6 +16,7 @@ import com.example.mingren.customviewset.R;
 
 /**
  * Created by Administrator on 2016/10/23.
+ * 访qq空间视差特效
  */
 public class ParallaxListView extends ListView {
 

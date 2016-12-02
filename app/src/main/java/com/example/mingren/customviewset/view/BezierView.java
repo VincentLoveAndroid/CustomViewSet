@@ -32,6 +32,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * Created by MingRen on 2016/9/24.
  */
+
 /**
  * Created by MingRen on 2016/9/24.
  * 贝塞尔曲线实现直播间泡泡效果
@@ -45,6 +46,7 @@ public class BezierView extends BaseCustomView {
 
     private Bubble p0;//起始点
     private Bubble p3;//起始点
+    private Matrix mMatrix;
 
 
     public BezierView(Context context) {
@@ -57,6 +59,7 @@ public class BezierView extends BaseCustomView {
 
     @Override
     protected void initSomething() {
+        mMatrix = new Matrix();
     }
 
     @Override
@@ -70,12 +73,12 @@ public class BezierView extends BaseCustomView {
         super.onDraw(canvas);
         for (Bubble bubble : bubbleList) {
             mPaint.setAlpha(bubble.alpha);
-            Matrix matrix = new Matrix();
-            matrix.postScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
+            mMatrix.reset();
+            mMatrix.postScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
             Bitmap bitmap = null;
             //导致性能问题
             try {
-                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), matrix, true);
+                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -121,7 +124,7 @@ public class BezierView extends BaseCustomView {
 
     private class BubbleUpdateListener implements ValueAnimator.AnimatorUpdateListener {
 
-        private WeakReference<Bubble> weakReference;//弱引用，不想强引用持有Bubble
+        private WeakReference<Bubble> weakReference;//弱引用，防止内存泄露
 
         public BubbleUpdateListener(Bubble bubble) {
             weakReference = new WeakReference<>(bubble);

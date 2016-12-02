@@ -15,7 +15,7 @@ import com.example.mingren.customviewset.Utils.PaintUtil;
 /**
  * Created by vincent on 2016/11/17.
  * email-address:674928145@qq.com
- * description:
+ * description:刻度尺
  */
 
 public class ScaleView extends View {
@@ -48,6 +48,7 @@ public class ScaleView extends View {
         drawScale(canvas);
         drawText(canvas);
     }
+
     //绘制文字
     private void drawText(Canvas canvas) {
         canvas.save();
@@ -65,6 +66,7 @@ public class ScaleView extends View {
         }
         canvas.restore();
     }
+
     //绘制刻度
     private void drawScale(Canvas canvas) {
         canvas.save();
@@ -86,6 +88,7 @@ public class ScaleView extends View {
         }
         canvas.restore();
     }
+
     //绘制边框
     private void drawRect(Canvas canvas) {
         canvas.save();

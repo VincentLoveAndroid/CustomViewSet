@@ -1,4 +1,5 @@
 package com.example.mingren.customviewset.view;
+
 import android.animation.TimeInterpolator;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -27,7 +28,7 @@ public class WaveView extends View {
     private List<Wave> waveList = new CopyOnWriteArrayList<>();
     private int invalidateDuration = 16;//16ms刷新一次 相当于60fps
     private long lastPlayTime;//记录上次播放的时间
-    private TimeInterpolator mTimeInterpolator =new LinearInterpolator();
+    private TimeInterpolator mTimeInterpolator = new LinearInterpolator();
 
     public WaveView(Context context) {
         super(context);
@@ -44,16 +45,12 @@ public class WaveView extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(Color.BLUE);
-        getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-            @Override
-            public boolean onPreDraw() {
-                getViewTreeObserver().removeOnPreDrawListener(this);
-                mcx = getWidth() / 2;//获取中心点
-                mcy = getHeight() / 2;
-                return false;
-            }
-        });
+    }
 
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        mcx = getWidth() / 2;//获取中心点
+        mcy = getHeight() / 2;
     }
 
     @Override

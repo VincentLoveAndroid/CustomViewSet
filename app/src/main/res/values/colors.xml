@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="color_radar_bg_internal">#8858D3E3</color>
+    <color name="color_radar_bg">#21BBDF</color>
+    <color name="color_radar_line">#9AD4ED</color>
 </resources>
