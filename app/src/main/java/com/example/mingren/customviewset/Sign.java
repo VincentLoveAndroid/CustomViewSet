@@ -17,10 +17,10 @@ public class Sign {
     static String[] a = new String[2];
 
     public static void main(String arg[]) {
-
-        for(int i=0, j=100;i<j;i++,j--){
-            System.out.println(i+" "+j);
-        }
+//        for (int i = 0; i < 0; i++) {
+//            System.out.println(i + "");
+//        }
+        System.out.println(test());
     }
 
     @Override
@@ -28,9 +28,12 @@ public class Sign {
         return super.toString();
     }
 
-    @MyInfo
-    public void getName() {
-        Bitmap bitmap = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
-
+    static String test() {
+        try {
+            System.out.println("先执行这里");
+            return "return啦";
+        } finally {
+            System.out.println("finally");
+        }
     }
 }   

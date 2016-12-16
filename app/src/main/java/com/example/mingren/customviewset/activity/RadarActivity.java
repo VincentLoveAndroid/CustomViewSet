@@ -8,7 +8,7 @@ import android.widget.SeekBar;
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.view.RadarView;
 
-public class RadarActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
+public class RadarActivity extends Activity {
 
     private RadarView radarView;
 
@@ -50,20 +50,5 @@ public class RadarActivity extends Activity implements SeekBar.OnSeekBarChangeLi
         public void onStopTrackingTouch(SeekBar seekBar) {
 
         }
-    }
-
-
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-
     }
 }

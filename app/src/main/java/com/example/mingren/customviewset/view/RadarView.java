@@ -16,7 +16,6 @@ import com.example.mingren.customviewset.Utils.PaintUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by vincent on 2016/12/1.
@@ -61,6 +60,11 @@ public class RadarView extends View {
         super(context, attrs);
         init();
     }
+
+    public RadarView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
 
     private void init() {
         mPaintInternal = PaintUtil.getDefaultPaint();

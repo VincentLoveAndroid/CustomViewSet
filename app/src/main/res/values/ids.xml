@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="iv_enter_motoring" type="id" />
+    <item name="iv_enter_tips" type="id" />
+    <item name="rl_enter_stage" type="id" />
+</resources>

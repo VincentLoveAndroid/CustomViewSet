@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_enter_stage"
+        android:layout_width="100dp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/iv_enter_motoring"
+            android:layout_width="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
+
+
+        <ImageView
+            android:id="@+id/iv_enter_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anim_zuojia_star" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_enter_tips"
+        android:layout_width="@dimen/motoring_enter_tips_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_enter_stage"
+        android:background="@mipmap/zuojia_enter_text_bg"
+        android:gravity="center"
+        android:textColor="#ffffff" />
+</RelativeLayout>
