@@ -41,20 +41,4 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    private class MyViewHolder extends RecyclerView.ViewHolder {
-
-        public MyViewHolder(View itemView) {
-            super(itemView);
-        }
-    }
-
-    private boolean isMove(MotionEvent event) {
-        int moveX = (int) event.getX();
-        int moveY = (int) event.getY();
-        if (Math.abs(moveX - startX) > scaledTouchSlop / 2 || Math.abs(moveY - startY) > scaledTouchSlop / 2) {
-            return true;
-        }
-        return false;
-    }
 }

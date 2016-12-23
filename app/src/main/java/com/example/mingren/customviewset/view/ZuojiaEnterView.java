@@ -104,7 +104,8 @@ public class ZuojiaEnterView extends RelativeLayout {
         exitAnimatorSet.playTogether(exitCarAnimator, exitTipAnimator);
 
         showAnimatorSet = new AnimatorSet();
-        showAnimatorSet.playTogether(showCarAnimator, showTipAnimator);
+        showAnimatorSet.play(showCarAnimator);
+        showAnimatorSet.play(showTipAnimator);
         showAnimatorSet.play(exitAnimatorSet).after(showTipAnimator);
         showAnimatorSet.start();
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.mingren.customviewset.R;
-import com.example.mingren.customviewset.view.ZuojiaEnterView;
+import com.example.mingren.customviewset.view.zuojia.ZuojiaEnterView;
 
 public class ZuojiaEnterActivity extends AppCompatActivity {
     static int count = 0;
@@ -19,7 +19,14 @@ public class ZuojiaEnterActivity extends AppCompatActivity {
         findViewById(R.id.tv_test).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                zuojiaEnterView.initMotoringMsg("鸣人开着兰博基尼来看你直播啦" + count++);
+                zuojiaEnterView.initMotoringMsg("鸣人开着兰博基尼来看你直播啦" + count++, "");
+            }
+        });
+
+        findViewById(R.id.tv_end).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zuojiaEnterView.cancelAnimator();
             }
         });
     }
