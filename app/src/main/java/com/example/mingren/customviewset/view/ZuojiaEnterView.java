@@ -112,12 +112,12 @@ public class ZuojiaEnterView extends RelativeLayout {
     }
 
     private void cancelAnimator() {
-        if (showAnimatorSet != null) showAnimatorSet.cancel();
-        if (exitAnimatorSet != null) showAnimatorSet.cancel();
-        if (showCarAnimator != null) showCarAnimator.cancel();
-        if (showTipAnimator != null) showTipAnimator.cancel();
-        if (exitCarAnimator != null) exitCarAnimator.cancel();
-        if (exitTipAnimator != null) exitTipAnimator.cancel();
+        if (showAnimatorSet != null) showAnimatorSet.end();
+        if (exitAnimatorSet != null) showAnimatorSet.end();
+        if (showCarAnimator != null) showCarAnimator.end();
+        if (showTipAnimator != null) showTipAnimator.end();
+        if (exitCarAnimator != null) exitCarAnimator.end();
+        if (exitTipAnimator != null) exitTipAnimator.end();
     }
 
     @NonNull
