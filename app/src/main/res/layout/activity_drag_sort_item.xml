@@ -4,7 +4,7 @@
     android:id="@+id/activity_drag_sort_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.DragSortItemActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.DragSortItemActivity">
 
 
     <android.support.v7.widget.RecyclerView

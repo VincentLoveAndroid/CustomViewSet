@@ -6,4 +6,181 @@
     <color name="color_radar_bg_internal">#8858D3E3</color>
     <color name="color_radar_bg">#21BBDF</color>
     <color name="color_radar_line">#9AD4ED</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="bg_color">#EDEDED</color>
+    <color name="left_menu_color">#373950</color>
+    <color name="left_menu_color_item_text">#000</color>
+    <color name="left_menu_color_deep">#31334A</color>
+    <color name="green">#00ff00</color>
+    <color name="green_1">#8cd98e</color>
+    <color name="blue">#67b4fc</color>
+    <color name="gold">#FFB230</color>
+    <color name="yellow2">#FFF100</color>
+    <color name="rose_red">#ff7eb4</color>
+    <color name="transparent_dark">#c0000000</color>
+    <color name="translucent_white_bg">#f2ffffff</color>
+    <color name="translucent_white_bg_2">#a0ffffff</color>
+    <color name="transparent_bg_light">#90000000</color>
+    <color name="transparent_activity">#90000000</color>
+    <color name="transparent_1">#66000000</color>
+    <color name="transparent_3">#40000000</color>
+    <color name="transparent_45">#70000000</color>
+    <color name="transparent_4">#93000000</color>
+    <color name="transparent_80">#CC000000</color>
+    <color name="transparent_70">#B2000000</color>
+    <color name="transparent_40">#66000000</color>
+    <color name="transparent_46">#77000000</color>
+    <color name="transparent_28">#47000000</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="list_bg_color">#f8f8f8</color>
+    <color name="background_color">#f4f4f4</color>
+    <color name="topbar_gray_color">#f5f5f5</color>
+    <color name="topbar_default_color">#ffffff</color>
+    <color name="topbar_default_background_color">#fd7012</color>
+    <color name="topbar_default_color_transparent">#00000000</color>
+    <color name="topbar_default_color_orange">#FF6903</color>
+    <color name="topbar_color_orange">#FD781D</color>
+    <color name="topbar_text_color_black">#000000</color>
+    <color name="topbar_text_color_white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black1">#333333</color>
+    <color name="white">#ffffff</color>
+    <color name="hot_color_blue">#67B5FE</color>
+    <color name="hot_color_pink">#FF7DB3</color>
+    <color name="hot_color_red">#FF6600</color>
+    <color name="hot_color_green">#65E053</color>
+    <color name="room_detail_bg">#f4f4f4</color>
+    <color name="yellow_deep">#F4Fe59</color>
+    <color name="chat_main_color">#1A000000</color>
+    <color name="white1">#fcfcfc</color>
+    <color name="white80">#CCffffff</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="bg_primary_color">#f4f4f4</color>
+    <color name="gray">#898989</color>
+    <color name="gray_white">#E6EBEF</color>
+    <color name="gray2_color">#4f4f4f</color>
+    <color name="gray3_color">#6a6a6a</color>
+    <color name="gray4_color">#808080</color>
+    <color name="gray4_color_1">#898989</color>
+    <color name="gray4_color_2">#d9d9d9</color>
+
+    <color name="gray5_color">#aaaaaa</color>
+    <color name="gray6_color">#e0e0e0</color>
+    <color name="gray777_color">#777777</color>
+    <color name="gray8_color">#dddddd</color>
+    <color name="gray10_color">#eeeeee</color>
+    <color name="gray9_color">#999999</color>
+    <color name="gray11_color">#b5b5b5</color>
+    <color name="gray12_color">#dadada</color>
+    <color name="gray13_color">#fdfdfd</color>
+    <color name="gray14_color">#485267</color>
+    <color name="gray16_color">#c0c0d4</color>
+    <color name="transparent_50">#7f000000</color>
+
+    <color name="hint_text_color">#c1c1c8</color>
+    <color name="link_color_from">#ffffff</color>
+    <color name="link_color_to">#225599</color>
+    <color name="login_and_register_underline_text">#8f8fa7</color>
+    <color name="day_total_list_divider_color">#8d8d8d</color>
+
+
+    <!-- selector color####start- -->
+    <color name="blue_text_color">#67B5FE</color>
+    <color name="orange_text_color">#ff6600</color>
+    <color name="orange_text_color_deep">#fd5900</color>
+    <color name="orange_text_color_disable">#64ff6600</color>
+    <color name="black_text_color">#000000</color>
+    <color name="black_text_color_disable">#64000000</color>
+    <color name="white_text_color">#ffffff</color>
+    <color name="white_text_color_disable">#64ffffff</color>
+    <color name="live_manage_rules_click_color">#F66302</color>
+    <color name="live_manage_rules_color">#EBE8E6</color>
+    <color name="boy_text_color">#6fc6fd</color>
+    <color name="girl_text_color">#ff86c2</color>
+    <!-- selector color####end- -->
+
+    <color name="red">#E9051F</color>
+    <color name="red_1">#e2655e</color>
+    <color name="red_disable">#EE8895</color>
+    <color name="search_friend_edit_bg">#FD7112</color>
+    <color name="button_send_pressed_color">#ec5f01</color>
+
+    <color name="select_city_choosed_city">#ff6600</color>
+    <color name="select_city_text_tag">#898989</color>
+
+    <color name="orange_bg">#FD781D</color>
+    <color name="send_button_bg">#666666</color>
+
+    <color name="village_met_express_obove_line">#f2f2f2</color>
+
+    <color name="progress_color">#33000000</color>
+    <color name="row_bg_press">#f4f4f4</color>
+
+    <color name="line_color">#dddddd</color>
+    <color name="contacts_line_color">#dedede</color>
+
+    <color name="hyperlink_color">#1076be</color>
+    <color name="primary_color">#FF6600</color>
+
+    <color name="shape_word_name_color">#7e7e7f</color>
+
+    <color name="room_gray">#aaaaaa</color>
+    <color name="room_report_bag">#f3f3f3</color>
+    <color name="room_report_text_color">#898989</color>
+    <color name="gray_3">#9c9c9c</color>
+
+    <color name="my_room_item">#3f000000</color>
+    <color name="chatbar_main_bg">#E3E4E8</color>
+    <color name="input_area_bg">#EDEEF2</color>
+    <color name="hong_bao_orange_text">#FED671</color>
+    <color name="room_drawer_menu_item_normal_color">#f7f7f7</color>
+    <color name="room_member_sex_female_color">#ff8aa8</color>
+
+    <color name="chat_title_bg">#FEFDF8</color>
+
+    <color name="zone_bg_color_gray">#f4f4f4</color>
+    <color name="zone_gift_sell_rest_num_bg">#f2f2f2</color>
+    <color name="zone_gift_sell_btn_enable_color">#e5e5e5</color>
+
+    <color name="home_page_bg_color">#f3f3f3</color>
+    <color name="home_page_tab_view_storke_color">#333333</color>
+    <color name="home_page_tab_view_text_color_unselected">#333333</color>
+    <color name="home_page_broadcast_bg">#4D000000</color>
+
+
+    <color name="my_diamond_count_color">#FE5E01</color>
+
+    <color name="zhaiyou_group_item_header_orange_1">#ff6600</color>
+    <color name="zhaiyou_group_item_header_orange_2">#ff944c</color>
+    <color name="zhaiyou_group_item_header_orange_3">#ffba8c</color>
+    <color name="zhaiyou_group_item_header_orange_4">#ffe0cc</color>
+
+    <color name="yazhai_msg_top_content_color">#61646b</color>
+    <color name="yazhai_msg_link_color">#225599</color>
+
+    <color name="family_detail_header_bg">#FEF8D9</color>
+
+
+    <color name="level_color_1">#ffffff</color>
+    <color name="level_color_2">#50b12c</color>
+    <color name="level_color_3">#32a6ef</color>
+    <color name="level_color_4">#ff383a</color>
+    <color name="level_color_5">#de3ee0</color>
+    <color name="level_color_6">#ff6600</color>
+
+    <color name="lev_color_gray">#4D000000</color>
+
+
+    <color name="family_rank_list_top1_bg">#fff7e0</color>
+
+    <color name="income_color">#fff000</color>
+
+    <color name="guard_score_text_color">#FA500A</color>
+
+    <color name="chat_message_to_bg">#ecf0f7</color>
+
 </resources>

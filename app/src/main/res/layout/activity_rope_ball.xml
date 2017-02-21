@@ -4,7 +4,7 @@
     android:id="@+id/activity_rope_ball"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.RopeBallActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.RopeBallActivity">
 
     <com.example.mingren.customviewset.view.RopeBallView
         android:layout_width="300dp"

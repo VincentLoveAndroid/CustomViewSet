@@ -5,4 +5,5 @@
     <dimen name="parallax_header_height">200dp</dimen>
     <dimen name="motoring_enter_tips_width">260dp</dimen>
     <dimen name="motoring_stage_width">100dp</dimen>
+    <dimen name="size_small_12sp">12dp</dimen>
 </resources>

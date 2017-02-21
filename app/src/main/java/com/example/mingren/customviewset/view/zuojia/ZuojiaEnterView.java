@@ -1,4 +1,4 @@
-package com.example.mingren.customviewset.view;
+package com.example.mingren.customviewset.view.zuojia;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

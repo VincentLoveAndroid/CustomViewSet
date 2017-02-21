@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:id="@+id/ll_foot_getting_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/pb_foot"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/load_more_progress" />
+
+        <com.yazhai.community.ui.view.YzTextView
+            android:id="@+id/tv_foot_getting_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="正在查找包房..."
+            android:textColor="@color/gray"
+            android:textSize="@dimen/size_small_12sp" />
+    </LinearLayout>
+
+    <com.yazhai.community.ui.view.YzTextView
+        android:id="@+id/tv_foot_no_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="暂时没有更多包房了"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size_small_12sp"
+        android:visibility="invisible" />
+
+    <com.yazhai.community.ui.view.YzTextView
+        android:id="@+id/tv_foot_get_data_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="网络不通"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size_small_12sp"
+        android:visibility="invisible" />
+
+    <com.yazhai.community.ui.view.YzTextView
+        android:id="@+id/tv_foot_no_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="榜单暂未生成"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/size_small_12sp"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_swipe_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:mContext="com.example.mingren.customviewset.view.swipeCard.SwipeCardActivity">
+    tools:mContext=".MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_test"
+
+    <com.example.mingren.customviewset.view.dragPhoto.DragPhotoView
+        android:id="@+id/photo_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:background="#ffa"></android.support.v7.widget.RecyclerView>
+        android:src="@drawable/ic_launcher" />
 </RelativeLayout>

@@ -4,7 +4,7 @@
     android:id="@+id/activity_scale"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.ScaleActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.ScaleActivity">
 
     <!--<com.example.mingren.customviewset.view.ScaleView-->
     <!--android:layout_width="match_parent"-->

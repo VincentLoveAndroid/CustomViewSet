@@ -4,7 +4,7 @@
     android:id="@+id/activity_pay_edit_text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.PayEditTextActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.PayEditTextActivity">
 
 
     <com.example.mingren.customviewset.view.PayEditText

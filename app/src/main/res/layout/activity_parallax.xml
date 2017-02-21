@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.ParallaxActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.ParallaxActivity">
 
     <com.example.mingren.customviewset.view.ParallaxListView
         android:id="@+id/lv_list"

@@ -4,7 +4,7 @@
     android:id="@+id/activity_measure"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.MeasureActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.MeasureActivity">
 
     <com.example.mingren.customviewset.view.MeasureView
         android:layout_width="wrap_content"

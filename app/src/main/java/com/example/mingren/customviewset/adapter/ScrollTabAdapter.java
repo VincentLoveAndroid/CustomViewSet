@@ -26,12 +26,20 @@ public class ScrollTabAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public ScrollTabAdapter(Context context) {
         mContext = context;
-        for (int i = 30; i > 0; i--) {
+        for (int i = 0; i < 30; i++) {
             FamilyRankBean bean = new FamilyRankBean();
             bean.text = i + "期";
             textList.add(bean);
         }
 
+    }
+
+    public void addData() {
+        for (int i = 29; i < 100; i++) {
+            FamilyRankBean bean = new FamilyRankBean();
+            bean.text = i + "期";
+            textList.add(bean);
+        }
     }
 
     @Override

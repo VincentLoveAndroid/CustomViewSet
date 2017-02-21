@@ -6,7 +6,6 @@ package com.example.mingren.customviewset.Utils;
 public class Test {
 
     public static void main(String[] args) {
-        double sqrt = Math.sqrt(49);
-        System.out.println("value" + sqrt);
+        DiskCacheUtil diskCacheUtil = DiskCacheUtil.newInstance(null);
     }
 }

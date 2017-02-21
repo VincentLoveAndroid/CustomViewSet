@@ -2,8 +2,10 @@ package com.example.mingren.customviewset.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.LayoutInflaterCompat;
 import android.support.v4.view.LayoutInflaterFactory;
+import android.support.v4.widget.ListViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.AttributeSet;
@@ -37,5 +39,6 @@ public class BitmapActivity extends Activity {
         });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bitmap);
+
     }
 }

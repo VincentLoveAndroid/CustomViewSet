@@ -5,22 +5,11 @@ import android.os.Bundle;
 
 import com.example.mingren.customviewset.R;
 
-public class ScaleActivity extends AppCompatActivity {
-
-    static String a = "aaa\nbbb";
+public class CouponActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scale);
-    }
-
-    public static void main(String[] arg0) {
-        System.out.println(a);
-        System.out.println(a.replaceAll("\n",""));
-
+        setContentView(R.layout.activity_coupon);
     }
 }
-
-
-

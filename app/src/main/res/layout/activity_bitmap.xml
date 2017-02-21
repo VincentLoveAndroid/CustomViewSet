@@ -4,7 +4,7 @@
     android:id="@+id/activity_bitmap"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mingren.customviewset.activity.BitmapActivity">
+    tools:mContext="com.example.mingren.customviewset.activity.BitmapActivity">
 
     <com.example.mingren.customviewset.view.BitmapView
         android:layout_width="match_parent"
