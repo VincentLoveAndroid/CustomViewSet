@@ -8,6 +8,9 @@ import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Xfermode;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -115,6 +118,7 @@ public class MatrixView extends View {
                         0, 0, 1.3f, 0, 0,//B
                         0, 0, 0, 1.3f, 0,//A
                 };
+                new ColorMatrix().setScale(1.3f, 1.3f, 1.3f, 1);
                 break;
             case FILTER_COLOR_ADVERSE:
                 matrix = new float[]{
@@ -126,7 +130,15 @@ public class MatrixView extends View {
                 break;
 
         }
-        mColorMatrixColorFilter = new ColorMatrixColorFilter(new ColorMatrix(matrix));
+        ColorMatrix colorMatrix = new ColorMatrix(matrix);
+//        ColorMatrix colorMatrix = new ColorMatrix();
+//        colorMatrix.set(matrix);
+//        colorMatrix.setScale(1.3f,1.3f,1.3f,1);//色彩缩放
+//        colorMatrix.reset();//重置
+//        colorMatrix.setSaturation(0);//色彩饱和度，0灰色，1，保持原来不变，>1增加饱和度
+//        colorMatrix.setRotate(axis,degrees);//色彩旋转
+        mColorMatrixColorFilter = new ColorMatrixColorFilter(colorMatrix);
+
         postInvalidate();
     }
 

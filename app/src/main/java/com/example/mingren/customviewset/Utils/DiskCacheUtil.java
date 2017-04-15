@@ -19,8 +19,6 @@ import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import uk.co.senab.photoview.PhotoView;
-
 /**
  * Created by vincent on 2016/12/29.
  * email-address:674928145@qq.com
