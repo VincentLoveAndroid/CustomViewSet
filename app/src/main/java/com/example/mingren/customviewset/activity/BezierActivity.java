@@ -5,17 +5,11 @@ import android.os.Bundle;
 
 import com.example.mingren.customviewset.R;
 
-public class ScaleActivity extends AppCompatActivity {
-
-    static String a = "aaa\nbbb";
+public class BezierActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scale);
+        setContentView(R.layout.activity_bezier);
     }
-
 }
-
-
-

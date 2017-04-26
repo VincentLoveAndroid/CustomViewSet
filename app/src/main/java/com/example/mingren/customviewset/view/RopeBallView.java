@@ -94,6 +94,7 @@ public class RopeBallView extends SurfaceView implements SurfaceHolder.Callback,
                 ) {
 
         } finally {
+            if(mCanvas!=null)
             mHolder.unlockCanvasAndPost(mCanvas);
         }
     }

@@ -134,7 +134,7 @@ public class RadarView extends View {
         String tips = "芝麻分是根据以下五个维度综合评估而来";
         mPaintScore.setTextSize(35);
         float tipsTextWidth = mPaintScore.measureText(tips);
-        canvas.drawText(tips, 0 - tipsTextWidth / 2, -350, mPaintScore);
+        canvas.drawText(tips, 0 - tipsTextWidth / 2, -500, mPaintScore);
     }
 
     /**

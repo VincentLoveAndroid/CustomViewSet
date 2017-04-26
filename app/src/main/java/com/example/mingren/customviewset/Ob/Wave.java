@@ -53,8 +53,8 @@ public class Wave {
     }
 
     public int getRadius() {
-        radius = (int) (20 + getFraction() * (120 - 20));
-        if (radius > 120) radius = 120;
+        radius = (int) (20 + getFraction() * (200 - 20));
+        if (radius > 200) radius = 200;
         return radius;
     }
 
