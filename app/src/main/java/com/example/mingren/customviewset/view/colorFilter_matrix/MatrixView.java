@@ -85,7 +85,7 @@ public class MatrixView extends View {
                         0, 0, 0, 1, 0,//A
                 };
                 break;
-            case FILTER_COLOR_DEEP_GREEN:
+            case FILTER_COLOR_DEEP_GREEN://增强绿色
                 matrix = new float[]{
                         1, 0, 0, 0, 0,//R 1*R+100
                         0, 1, 0, 0, 100,//G
@@ -94,7 +94,7 @@ public class MatrixView extends View {
                 };
                 break;
 
-            case FILTER_COLOR_REVERSE:
+            case FILTER_COLOR_REVERSE://颜色还原
                 matrix = new float[]{
                         1, 0, 0, 0, 0,//R
                         0, 1, 0, 0, 0,//G
@@ -103,7 +103,7 @@ public class MatrixView extends View {
                 };
                 break;
 
-            case FILTER_COLOR_INVERSION:
+            case FILTER_COLOR_INVERSION://反相效果
                 matrix = new float[]{
                         -1, 0, 0, 0, 255,//R
                         0, -1, 0, 0, 255,//G
@@ -111,7 +111,7 @@ public class MatrixView extends View {
                         0, 0, 0, 1, 0,//A
                 };
                 break;
-            case FILTER_COLOR_STRONG_ALL:
+            case FILTER_COLOR_STRONG_ALL://颜色增强
                 matrix = new float[]{
                         1.3f, 0, 0, 0, 0,//R
                         0, 1.3f, 0, 0, 0,//G
@@ -120,7 +120,7 @@ public class MatrixView extends View {
                 };
                 new ColorMatrix().setScale(1.3f, 1.3f, 1.3f, 1);
                 break;
-            case FILTER_COLOR_ADVERSE:
+            case FILTER_COLOR_ADVERSE://反色效果
                 matrix = new float[]{
                         0, 1f, 0, 0, 0,//R
                         1f, 0, 0, 0, 0,//G

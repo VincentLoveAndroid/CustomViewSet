@@ -45,47 +45,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity.ParallaxActivity"
-            android:screenOrientation="portrait">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.DragSortItemActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.TabLayoutActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+        <activity android:name=".activity.TabLayoutActivity"></activity>
         <activity android:name=".activity.VectorDrawableActivity" />
         <activity
             android:name=".ndk.ImageActivity"
-            android:screenOrientation="portrait">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.RopeBallActivity"
             android:screenOrientation="portrait">
@@ -219,13 +195,13 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".activity.ColorMatrixFilterActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.ColorMatrixFilterActivity"></activity>
+        <activity android:name=".activity.BezierActivity" />
+        <activity android:name=".activity.ClockSurfaceActivity" />
+        <activity android:name=".activity.GodActivity" />
+        <activity android:name=".activity.LuckDishActivity" />
+        <activity android:name=".activity.Win10LaunchActivity" />
+        <activity android:name=".activity.WaveActivity"></activity>
     </application>
 
 </manifest>
