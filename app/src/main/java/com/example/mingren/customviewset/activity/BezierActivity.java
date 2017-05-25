@@ -10,6 +10,6 @@ public class BezierActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezier);
+//        setContentView(R.layout.activity_bezier);
     }
 }

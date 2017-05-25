@@ -45,6 +45,7 @@ public class WaveView extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(Color.BLUE);
+
     }
 
     @Override

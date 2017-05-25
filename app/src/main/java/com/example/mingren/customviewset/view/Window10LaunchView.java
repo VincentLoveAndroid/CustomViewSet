@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by MingRen on 2016/9/22.
+ * Created by vincent on 2016/9/22.
  */
 public class Window10LaunchView extends View implements View.OnClickListener {
 

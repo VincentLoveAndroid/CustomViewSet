@@ -17,7 +17,6 @@ import android.widget.Toast;
 
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.Utils.DensityUtil;
-import com.example.mingren.customviewset.adapter.ScrollTabAdapter;
 
 
 import java.lang.ref.WeakReference;
