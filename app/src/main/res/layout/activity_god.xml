@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_scale"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:mContext="com.example.mingren.customviewset.activity.ScaleActivity">
-
-    <com.example.mingren.customviewset.view.ScaleView
+    tools:context="com.example.mingren.customviewset.activity.GodActivity">
+<com.example.mingren.customviewset.view.GodView
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
-
-
-
 </RelativeLayout>

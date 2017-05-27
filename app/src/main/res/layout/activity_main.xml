@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,16 +7,152 @@
     android:orientation="vertical"
     tools:mContext=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_test"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="跳转"
-        android:textSize="50sp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:onClick="RadarView"
+        android:text="芝麻信用" />
 
-    <FrameLayout
-        android:id="@+id/fl_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
-</LinearLayout>
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="17dp"
+        android:onClick="MatrixView"
+        android:text="颜色矩阵" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button13"
+        android:layout_marginTop="19dp"
+        android:onClick="RopeBallView"
+        android:text="回弹小球" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button14"
+        android:layout_alignRight="@+id/button14"
+        android:layout_below="@+id/button14"
+        android:layout_marginTop="23dp"
+        android:onClick="ParallaxListView"
+        android:text="视差特效" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button15"
+        android:layout_marginTop="19dp"
+        android:onClick="PayEditText"
+        android:text="支付输入" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button16"
+        android:layout_alignRight="@+id/button16"
+        android:layout_below="@+id/button16"
+        android:layout_marginTop="19dp"
+        android:onClick="CouponView"
+        android:text="仿优惠券" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button17"
+        android:layout_marginTop="19dp"
+        android:onClick="DragSortItem"
+        android:text="拖拽排序" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:onClick="waveView"
+        android:text="仿咻一咻" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button19"
+        android:layout_alignRight="@+id/button19"
+        android:layout_alignTop="@+id/button13"
+        android:onClick="bezierView"
+        android:text="送礼气泡" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button20"
+        android:layout_alignRight="@+id/button20"
+        android:layout_alignTop="@+id/button14"
+        android:onClick="clockSurfaceView"
+        android:text="自转时钟" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button21"
+        android:layout_alignRight="@+id/button21"
+        android:layout_alignTop="@+id/button15"
+        android:onClick="GodView"
+        android:text="粘性控件" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button22"
+        android:layout_alignRight="@+id/button22"
+        android:layout_alignTop="@+id/button16"
+        android:onClick="LuckyDishView"
+        android:text="幸运转盘" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button23"
+        android:layout_alignRight="@+id/button23"
+        android:layout_alignTop="@+id/button17"
+        android:onClick="Window10LaunchView"
+        android:text="win10界面" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button18"
+        android:onClick="ScaleView"
+        android:layout_alignBottom="@+id/button18"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="刻度尺" />
+</RelativeLayout>
