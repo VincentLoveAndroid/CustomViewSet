@@ -34,6 +34,7 @@ public class Sign {
             return "return啦";
         } finally {
             System.out.println("finally");
+            System.out.println("标签");
         }
     }
 }   
