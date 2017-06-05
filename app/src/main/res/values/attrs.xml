@@ -12,4 +12,21 @@
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="InfoItemView">
+        <attr name="item_name" format="reference|string" />
+        <attr name="input_hint" format="reference|string" />
+        <attr name="input_postfix" format="reference|string" />
+        <attr name="input_max_length" format="integer" />
+        <attr name="has_arrow" format="boolean" />
+        <attr name="clickable" format="boolean" />
+        <attr name="show_key_board" format="boolean" />
+        <attr name="select_item_arr" format="reference" />
+        <attr name="select_item_title" format="reference|string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CompleteInfoItemView">
+        <attr name="complete_item_name" format="reference|string" />
+    </declare-styleable>
 </resources>

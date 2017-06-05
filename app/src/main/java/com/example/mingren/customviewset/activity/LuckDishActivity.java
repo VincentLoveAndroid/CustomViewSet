@@ -10,6 +10,6 @@ public class LuckDishActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_luck_dish);
+//        setContentView(R.layout.activity_luck_dish);
     }
 }

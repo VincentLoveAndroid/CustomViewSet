@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mingren.customviewset.activity.InfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单位基本信息" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:has_arrow="true"
+            app:input_hint="请输入单位名称"
+            app:item_name="单位名称"
+            app:show_key_board="false" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请选择所属行业"
+            app:select_item_title="请选择所属行业"
+            app:input_max_length="20"
+            app:item_name="所属行业" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单位联系方式" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:has_arrow="true"
+            app:input_hint="请选择单位城市"
+            app:item_name="单位城市"
+            app:show_key_board="false" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请输入详细单位地址"
+            app:item_name="单位地址" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:has_arrow="true"
+            app:input_hint="请选择住房类型"
+            app:item_name="住房类型"
+            app:select_item_arr="@array/credit_house_style"
+            app:select_item_title="请选择住房类型"
+            app:show_key_board="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="工作电话" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_area_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="区号"
+                    android:minWidth="60dp" />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"></View>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:hint="电话" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:has_arrow="true"
+            app:input_hint="请输入分机号"
+            app:item_name="分机号（选填）"
+            app:select_item_arr="@array/educations"
+            app:select_item_title="请选择学历情况"
+            app:show_key_board="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_above="@+id/tv_safe_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="下一步" />
+
+    <TextView
+        android:id="@+id/tv_safe_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="全程加密，保证您的信息安全" />
+
+</RelativeLayout>

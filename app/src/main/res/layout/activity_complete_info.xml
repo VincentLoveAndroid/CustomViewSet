@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.商品信息" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="商品信息" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2.身份信息" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="身份认证" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="肖像认证" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="还款银行卡" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="与客户合照" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3.基本信息" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="基本信息" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="工作信息" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="联系人信息" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4.面审评分" />
+
+    <com.example.mingren.customviewset.view.info.CompleteInfoItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:complete_item_name="面审评分" />
+</LinearLayout>
