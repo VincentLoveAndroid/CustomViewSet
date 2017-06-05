@@ -1,7 +1,8 @@
-package com.example.mingren.customviewset.view;
+package com.example.mingren.customviewset.view.info;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -13,11 +14,9 @@ import com.example.mingren.customviewset.Ob.CityBean;
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.adapter.CityParserTask;
 import com.example.mingren.customviewset.adapter.CitySelectAdapter;
-
+import com.example.mingren.customviewset.view.dialog.CustomDialog;
+import com.example.mingren.customviewset.view.dialog.CustomDialogUtil;
 import java.util.ArrayList;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by vincent on 2017/5/25.
@@ -31,6 +30,7 @@ public class SelectCityView extends LinearLayout implements View.OnClickListener
     private ArrayList<ArrayList<CityBean>> citys;
     private ArrayList<ArrayList<ArrayList<CityBean>>> areas;
     private CitySelectAdapter citySelectAdapter;
+    private CustomDialog dialog;
 
     public SelectCityView(Context context) {
         this(context, null);
@@ -56,6 +56,7 @@ public class SelectCityView extends LinearLayout implements View.OnClickListener
         tv_county.setOnClickListener(this);
 
         new CityParserTask().setCityParserCallBack(this).execute();
+
     }
 
 
@@ -63,13 +64,20 @@ public class SelectCityView extends LinearLayout implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv_province:
-                v_indicator.animate().x(tv_province.getLeft()).setDuration(500);
+                v_indicator.animate().x(tv_province.getLeft()).setDuration(200);
                 break;
             case R.id.tv_city:
-                v_indicator.animate().x(tv_city.getLeft()).setDuration(500);
+                v_indicator.animate().x(tv_city.getLeft()).setDuration(200);
                 break;
             case R.id.tv_county:
-                v_indicator.animate().x(tv_county.getLeft()).setDuration(500);
+                v_indicator.animate().x(tv_county.getLeft()).setDuration(200);
+
+                dialog = CustomDialogUtil.showTextSingleButtonDialog(getContext(), "商户授权书", getResources().getString(R.string.merchant_authorize_book), "确认", -1, new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (dialog != null) dialog.dismiss();
+                    }
+                });
                 break;
 
         }
@@ -80,8 +88,10 @@ public class SelectCityView extends LinearLayout implements View.OnClickListener
     public void onItemClick(String text, int type) {
         if (type == CitySelectAdapter.TYPE_PROVINCE) {
             tv_province.setText(text);
+            v_indicator.animate().x(tv_city.getLeft()).setDuration(200);
         } else if (type == CitySelectAdapter.TYPE_CITY) {
             tv_city.setText(text);
+            v_indicator.animate().x(tv_county.getLeft()).setDuration(200);
         } else {
             tv_county.setText(text);
         }

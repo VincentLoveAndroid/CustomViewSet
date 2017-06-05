@@ -4,6 +4,7 @@
     android:layout_height="45dp">
 
     <TextView
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:text="自有住房"
         android:layout_marginLeft="30dp"

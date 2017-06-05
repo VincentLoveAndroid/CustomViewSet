@@ -1,4 +1,4 @@
-package com.example.mingren.customviewset.view;
+package com.example.mingren.customviewset.view.info;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,7 +7,9 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.view.tkRefreshLayout.RefreshActivity;
@@ -17,10 +19,11 @@ import com.example.mingren.customviewset.view.tkRefreshLayout.RefreshActivity;
  * 显示选中凹下阴影效果的item
  */
 
-public class ShadeItemView extends RelativeLayout implements View.OnClickListener{
+public class ShadeItemView extends FrameLayout{
 
     private Paint mPaint;
     private boolean isSelected;
+    private TextView tvName;
 
     public ShadeItemView(Context context) {
         this(context,null);
@@ -33,6 +36,7 @@ public class ShadeItemView extends RelativeLayout implements View.OnClickListene
 
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.view_info_select_item, this, true);
+        tvName = (TextView) findViewById(R.id.tv_name);
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -40,7 +44,6 @@ public class ShadeItemView extends RelativeLayout implements View.OnClickListene
 
         setWillNotDraw(false);//清除ViewGroup不绘制的标志
 
-        setOnClickListener(this);
     }
 
     @Override
@@ -51,15 +54,13 @@ public class ShadeItemView extends RelativeLayout implements View.OnClickListene
         }
     }
 
-    @Override
     public void setSelected(boolean selected) {
         isSelected = selected;
         postInvalidate();
     }
 
-    @Override
-    public void onClick(View v) {
-        if(isSelected)setSelected(false);
-        else setSelected(true);
+    public void setName(String name) {
+        tvName.setText(name);
     }
+
 }

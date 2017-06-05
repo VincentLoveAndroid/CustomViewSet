@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mingren.customviewset.activity.InfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="家庭联系人" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:has_arrow="true"
+            app:input_hint="请选择联系人关系"
+            app:item_name="联系人关系"
+            app:show_key_board="false" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请选择联系人姓名"
+            app:select_item_title="请选择联系人姓名"
+            app:input_max_length="20"
+            app:item_name="联系人姓名" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请输入联系人电话"
+            app:item_name="联系人电话"
+            app:show_key_board="false" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="紧急联系人" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:has_arrow="true"
+            app:input_hint="请选择联系人关系"
+            app:item_name="联系人关系"
+            app:show_key_board="false" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请选择联系人姓名"
+            app:item_name="联系人姓名" />
+
+        <com.example.mingren.customviewset.view.info.InfoItemView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:input_hint="请输入联系人电话"
+            app:item_name="联系人电话"
+            app:select_item_arr="@array/credit_house_style"
+            app:select_item_title="请选择住房类型"
+            app:show_key_board="false" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_above="@+id/tv_safe_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="下一步" />
+
+    <TextView
+        android:id="@+id/tv_safe_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="全程加密，保证您的信息安全" />
+
+</RelativeLayout>
