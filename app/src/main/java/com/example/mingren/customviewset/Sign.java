@@ -36,6 +36,7 @@ public class Sign {
             System.out.println("finally");
             System.out.println("测试一下");
             System.out.println("我是需要合并的代码");
+            System.out.println("我是需要合并的代码2");
         }
     }
 }   
