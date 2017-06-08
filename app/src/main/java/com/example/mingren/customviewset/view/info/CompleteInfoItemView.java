@@ -2,6 +2,7 @@ package com.example.mingren.customviewset.view.info;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -12,6 +13,9 @@ import android.widget.TextView;
 
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.Utils.StringUtils;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
  * Created by vincent on 2017/6/2.
@@ -24,9 +28,16 @@ public class CompleteInfoItemView extends FrameLayout {
     private ImageView ivIndicator;
     private TextView tvTip;
     private String sItemName;
+    public static final int STATE_UNCHANGEABLE = 0x01;
+    public static final int STATE_CHANGEABLE = 0x02;
+
+    @IntDef({STATE_CHANGEABLE, STATE_UNCHANGEABLE})
+    @Retention(RetentionPolicy.SOURCE)
+    private @interface ViewState {
+    }
 
     public CompleteInfoItemView(@NonNull Context context) {
-        this(context,null);
+        this(context, null);
     }
 
     public CompleteInfoItemView(@NonNull Context context, @Nullable AttributeSet attrs) {
@@ -48,7 +59,7 @@ public class CompleteInfoItemView extends FrameLayout {
         ivIndicator = (ImageView) findViewById(R.id.iv_item_indicator);
         tvTip = (TextView) findViewById(R.id.tv_item_tip);
 
-        if(!StringUtils.isEmpty(sItemName)) setsItemName(sItemName);
+        if (!StringUtils.isEmpty(sItemName)) setsItemName(sItemName);
     }
 
     public void setsItemName(String name) {
@@ -65,5 +76,16 @@ public class CompleteInfoItemView extends FrameLayout {
 
     public void setItemIndicator(int resId) {
         ivIndicator.setImageResource(resId);
+    }
+
+    public void refreshView(@ViewState int viewState,String tip) {
+        tvTip.setText(tip);
+        if (viewState == STATE_UNCHANGEABLE) {
+            setEnabled(false);
+//            setItemIcon();
+        } else if (viewState == STATE_CHANGEABLE) {
+            setEnabled(true);
+//            setItemIcon();
+        }
     }
 }

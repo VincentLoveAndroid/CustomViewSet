@@ -15,6 +15,7 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="match_parent"></com.example.mingren.customviewset.view.info.SelectCityView>-->
     <LinearLayout
+        android:id="@+id/ll_root"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -29,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
+            app:empty_tip="请选择常用聊天软件"
             app:has_arrow="true"
             app:input_hint="请选择常用聊天软件"
             app:item_name="QQ/微信"
@@ -37,8 +39,10 @@
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请输入网络账号"
             app:input_hint="请输入网络账号"
             app:input_max_length="20"
             app:item_name="网络账号" />
@@ -47,20 +51,26 @@
             android:id="@+id/infoItemView_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:empty_tip="请选择居住城市"
             app:has_arrow="true"
             app:input_hint="请选择居住城市"
             app:item_name="居住城市"
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请输入详细地址"
             app:input_hint="请输入详细地址"
             app:item_name="详细地址" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_house"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请选择住房类型"
             app:has_arrow="true"
             app:input_hint="请选择住房类型"
             app:item_name="住房类型"
@@ -68,46 +78,10 @@
             app:select_item_title="请选择住房类型"
             app:show_key_board="false" />
 
-        <RelativeLayout
+        <com.example.mingren.customviewset.view.info.HomePhoneItemView
+            android:id="@+id/homePhoneItemView_home"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="家庭电话(选填)" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="100dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/et_area_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="区号"
-                    android:minWidth="60dp" />
-
-                <View
-                    android:layout_width="50dp"
-                    android:layout_height="1dp"
-                    android:background="@color/black"></View>
-
-                <EditText
-                    android:id="@+id/et_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:hint="电话" />
-            </LinearLayout>
-        </RelativeLayout>
+            android:layout_height="wrap_content"></com.example.mingren.customviewset.view.info.HomePhoneItemView>
 
         <TextView
             android:layout_width="match_parent"
@@ -115,8 +89,10 @@
             android:text="个人信息" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_education"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请选择学历情况"
             app:has_arrow="true"
             app:input_hint="请选择学历情况"
             app:item_name="学历情况"
@@ -125,8 +101,10 @@
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_married"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请选择婚姻状况"
             app:has_arrow="true"
             app:input_hint="请选择婚姻状况"
             app:item_name="婚姻状况"
@@ -135,8 +113,10 @@
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_income"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:empty_tip="请选择月收入情况"
             app:has_arrow="true"
             app:input_hint="请选择月收入情况"
             app:item_name="月收入情况"
@@ -148,20 +128,22 @@
 
     <TextView
         android:id="@+id/tv_next"
-        android:layout_above="@+id/tv_safe_tip"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_safe_tip"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_btn_rect"
+        android:gravity="center"
         android:text="下一步" />
 
     <TextView
         android:id="@+id/tv_safe_tip"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:text="全程加密，保证您的信息安全" />
 
 </RelativeLayout>

@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
@@ -14,6 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mingren.customviewset.R;
+import com.example.mingren.customviewset.Utils.StringUtils;
+import com.example.mingren.customviewset.Utils.ToastUtils;
+import com.example.mingren.customviewset.activity.info.ItemWatcher;
 import com.example.mingren.customviewset.view.popupwindow.PopupWindowHelper;
 
 import java.util.ArrayList;
@@ -26,7 +30,7 @@ import butterknife.ButterKnife;
  * Created by vincent on 2017/5/25.
  */
 
-public class InfoItemView extends FrameLayout implements View.OnClickListener, TextWatcher, SelectItemView.OperateListener {
+public class InfoItemView extends FrameLayout implements View.OnClickListener, TextWatcher, ItemWatcher, SelectItemView.OperateListener {
 
     @Bind(R.id.tv_item_name)
     TextView tv_item_name;
@@ -43,6 +47,7 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
     private boolean clickable;
     private boolean show_key_board;
     private String itemTitle;
+    private String emptyTip;
     private int maxLength;
     List<InfoSelectBean> itemList = new ArrayList<>();
     private CharSequence[] items;
@@ -70,6 +75,7 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
         show_key_board = a.getBoolean(R.styleable.InfoItemView_show_key_board, true);
         itemTitle = a.getString(R.styleable.InfoItemView_select_item_title);
         items = a.getTextArray(R.styleable.InfoItemView_select_item_arr);
+        emptyTip = a.getString(R.styleable.InfoItemView_empty_tip);
         a.recycle();
     }
 
@@ -91,7 +97,7 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
         et_input.setHint(sHint);
         et_input.addTextChangedListener(this);
         if (!show_key_board) {
-//            et_input.setInputType(InputType.TYPE_NULL);
+            et_input.setInputType(InputType.TYPE_NULL);
             setOnClickListener(this);
         }
         tv_input_postfix.setText(sPostfix);
@@ -109,8 +115,18 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
         return et_input.getText() == null ? "" : et_input.getText().toString().trim();
     }
 
+    @Override
+    public boolean showEmptyTip() {
+        if (!isCompleted()) {
+            ToastUtils.showToast(getContext(),emptyTip);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
     public boolean isCompleted() {
-        return getInputText().isEmpty();
+        return !TextUtils.isEmpty(getInputText());
     }
 
 
@@ -125,10 +141,10 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
     private void showSelectPopupWindow() {
         SelectItemView popupView = new SelectItemView(getContext());
         popupView.setOnOperateListener(this);
-        ShadeItemAdapter adapter = new ShadeItemAdapter(itemList,this);
+        ShadeItemAdapter adapter = new ShadeItemAdapter(itemList, this);
         popupView.setData(itemTitle, adapter);
         if (popupWindowHelper == null) {
-            popupWindowHelper = new PopupWindowHelper(getContext(), popupView,LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT);
+            popupWindowHelper = new PopupWindowHelper(getContext(), popupView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         }
         popupWindowHelper.showAsDropDown(this);
     }
@@ -149,7 +165,7 @@ public class InfoItemView extends FrameLayout implements View.OnClickListener, T
 
     @Override
     public void afterTextChanged(Editable s) {
-        Toast.makeText(getContext(), "填充完成--" + getInputText() + "-text Empty-" + isCompleted(), Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getContext(), "填充完成--" + getInputText() + "-text Empty-" + isCompleted(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

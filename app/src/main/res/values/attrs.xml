@@ -23,6 +23,7 @@
         <attr name="show_key_board" format="boolean" />
         <attr name="select_item_arr" format="reference" />
         <attr name="select_item_title" format="reference|string" />
+        <attr name="empty_tip" format="reference|string" />
 
     </declare-styleable>
 
