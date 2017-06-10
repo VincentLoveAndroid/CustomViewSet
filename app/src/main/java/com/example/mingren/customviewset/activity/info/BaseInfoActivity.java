@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,7 +28,7 @@ import butterknife.OnClick;
  * Created by vincent on 2017/6/5.
  */
 
-public class BaseInfoActivity extends Activity {
+public class BaseInfoActivity extends BaseSubmitInfoActivity {
     private static final String TAG = "BaseInfoActivity";
     @Bind(R.id.infoItemView_chat)
     InfoItemView infoItemView_chat;
@@ -49,8 +50,8 @@ public class BaseInfoActivity extends Activity {
     TextView tv_next;
     @Bind(R.id.homePhoneItemView_home)
     HomePhoneItemView homePhoneItemView_home;
-    @Bind(R.id.ll_root)
-    LinearLayout ll_root;
+    @Bind(R.id.ll_container)
+    LinearLayout ll_container;
     boolean isFill;
 
     @Override
@@ -58,6 +59,11 @@ public class BaseInfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base_info);
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public ViewGroup getContainer() {
+        return ll_container;
     }
 
     public static void start(Context context) {
@@ -79,7 +85,8 @@ public class BaseInfoActivity extends Activity {
         }
     }
 
-    private void submitData() {
+    @Override
+    public void submitData() {
         String chatWay = infoItemView_chat.getInputText();
         String account = infoItemView_account.getInputText();
 //        String city = infoItemView_city.getInputText();
@@ -92,7 +99,8 @@ public class BaseInfoActivity extends Activity {
         if ("QQ".equals(chatWay)) {
             boolean isQQ = VerifyUtils.checkQQ(this, account);
             if (!isQQ) return;
-        } else if ("微信".equals(chatWay)) {
+        }
+        if ("微信".equals(chatWay)) {
             boolean isWechat = VerifyUtils.checkWeChat(this, account);
             if (!isWechat) return;
         }
@@ -106,7 +114,7 @@ public class BaseInfoActivity extends Activity {
             ToastUtils.showToast(this, "请填写正确的家庭电话号码！");
             return;
         }
-        //网络请求
+        // TODO: 2017/6/9 网络请求 
         Log.i(TAG, "提交数据" + chatWay + " " + account + " " + address + " " + house + " " + married + " " + income + " ");
 
     }
@@ -121,34 +129,5 @@ public class BaseInfoActivity extends Activity {
         if (!isAllItemFill()) return;
         isFill = true;
         tv_next.setEnabled(true);
-    }
-
-    private boolean isAllItemFill() {
-        if (!isAllInfoItemFill(false)) return false;
-        //如需要，在这里检查没有实现ItemWatcher接口的控件
-        return true;
-    }
-
-    /**
-     * 遍历检查InfoItem是否未填写
-     */
-    private boolean isAllInfoItemFill(boolean showEmptyTip) {
-        for (int i = 0; i < ll_root.getChildCount(); i++) {
-            View child = ll_root.getChildAt(i);
-            if (child.getVisibility() == View.VISIBLE && child instanceof ItemWatcher) {
-                ItemWatcher watcher = ((ItemWatcher) child);
-                if (!watcher.isCompleted()) {
-                    if (showEmptyTip) watcher.showEmptyTip();
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    private boolean checkAllItemFillAndTips() {
-        if (!isAllInfoItemFill(true)) return false;
-        //如需要，在这里检查没有实现ItemWatcher接口的控件
-        return true;
     }
 }

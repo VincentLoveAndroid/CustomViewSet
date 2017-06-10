@@ -8,6 +8,7 @@
     tools:context="com.example.mingren.customviewset.activity.InfoActivity">
 
     <LinearLayout
+        android:id="@+id/ll_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,7 +19,7 @@
             android:text="单位基本信息" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
-            android:id="@+id/infoItemView_chat"
+            android:id="@+id/infoItemView_company"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
@@ -28,12 +29,13 @@
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_industry"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:input_hint="请选择所属行业"
-            app:select_item_title="请选择所属行业"
             app:input_max_length="20"
-            app:item_name="所属行业" />
+            app:item_name="所属行业"
+            app:select_item_title="请选择所属行业" />
 
         <TextView
             android:layout_width="match_parent"
@@ -50,12 +52,14 @@
             app:show_key_board="false" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:input_hint="请输入详细单位地址"
             app:item_name="单位地址" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_house"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:has_arrow="true"
@@ -65,48 +69,13 @@
             app:select_item_title="请选择住房类型"
             app:show_key_board="false" />
 
-        <RelativeLayout
+        <com.example.mingren.customviewset.view.info.HomePhoneItemView
+            android:id="@+id/homePhoneItemView_home"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="工作电话" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="100dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/et_area_code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="区号"
-                    android:minWidth="60dp" />
-
-                <View
-                    android:layout_width="50dp"
-                    android:layout_height="1dp"
-                    android:background="@color/black"></View>
-
-                <EditText
-                    android:id="@+id/et_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:background="@null"
-                    android:hint="电话" />
-            </LinearLayout>
-        </RelativeLayout>
+            android:layout_height="wrap_content" />
 
         <com.example.mingren.customviewset.view.info.InfoItemView
+            android:id="@+id/infoItemView_extension_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:has_arrow="true"
@@ -120,20 +89,20 @@
 
     <TextView
         android:id="@+id/tv_next"
-        android:layout_above="@+id/tv_safe_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_safe_tip"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:text="下一步" />
 
     <TextView
         android:id="@+id/tv_safe_tip"
-        android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:text="全程加密，保证您的信息安全" />
 
 </RelativeLayout>
