@@ -11,7 +11,7 @@ import com.example.mingren.customviewset.Utils.DensityUtil;
 import com.example.mingren.customviewset.Utils.ScreenUtils;
 
 /**
- * Created by vincent on 2016/10/19.
+ * Created by vincent on 2017/10/19.
  * email-address:674928145@qq.com
  */
 

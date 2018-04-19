@@ -6,4 +6,6 @@
     <dimen name="motoring_enter_tips_width">260dp</dimen>
     <dimen name="motoring_stage_width">100dp</dimen>
     <dimen name="size_small_12sp">12dp</dimen>
+    <dimen name="item_divider_view_height">54px</dimen>
+    <dimen name="item_margin_30px">30px</dimen>
 </resources>

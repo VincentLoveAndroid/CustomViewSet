@@ -19,24 +19,24 @@ import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.Utils.PaintUtil;
 
 /**
- * Created by vincent on 2017/4/13.
+ * Created by vincent on 2018/3/19
  * email-address:674928145@qq.com
- * description:
+ * description: 美图秀秀美颜效果
  */
 
 public class MatrixView extends View {
 
     private Paint mFilterPaint;
-    private Paint mOrignalPaint;
+    private Paint mOriginalPaint;
     private Bitmap mBitmap;
     private ColorMatrixColorFilter mColorMatrixColorFilter;
     public static final int FILTER_COLOR_RED = 1 << 1;
     public static final int FILTER_COLOR_GREEN = 1 << 2;
     public static final int FILTER_COLOR_BLUE = 1 << 3;
-    public static final int FILTER_COLOR_DEEP_GREEN = 1 << 4;
+    public static final int FILTER_COLOR_DEEP_GREEN = 1 << 4;//增强绿色
     public static final int FILTER_COLOR_REVERSE = 1 << 5;
     public static final int FILTER_COLOR_INVERSION = 1 << 6;//反相效果
-    public static final int FILTER_COLOR_STRONG_ALL = 1 << 7;
+    public static final int FILTER_COLOR_STRONG_ALL = 1 << 7;//颜色增强
     public static final int FILTER_COLOR_ADVERSE = 1 << 8;//反色效果
 
     public MatrixView(Context context) {
@@ -49,8 +49,8 @@ public class MatrixView extends View {
     }
 
     private void init() {
-        mOrignalPaint = PaintUtil.getDefaultPaint();
-        mOrignalPaint.setStyle(Paint.Style.FILL);
+        mOriginalPaint = PaintUtil.getDefaultPaint();
+        mOriginalPaint.setStyle(Paint.Style.FILL);
 
         mFilterPaint = PaintUtil.getDefaultPaint();
         mFilterPaint.setStyle(Paint.Style.FILL);
@@ -150,10 +150,13 @@ public class MatrixView extends View {
         setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         //设置矩阵颜色过滤器
 //        canvas.drawRect(100, 100, 300, 300, mFilterPaint);
-        canvas.drawBitmap(mBitmap, 100, 100, mOrignalPaint);
+        canvas.drawBitmap(mBitmap, 100, 100, mOriginalPaint);
 
         mFilterPaint.setColorFilter(mColorMatrixColorFilter);
 
         canvas.drawBitmap(mBitmap, 100, 600, mFilterPaint);
+
+        int a = 1;
+        a=a >>> 1;
     }
 }

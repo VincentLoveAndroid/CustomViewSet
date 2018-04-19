@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Created by vincent on 2017/5/27.
+ *
+ * Created by vincent on 2018/3/1.
  */
 
 public class CitySelectAdapter extends RecyclerView.Adapter<CitySelectAdapter.MyViewHolder> {

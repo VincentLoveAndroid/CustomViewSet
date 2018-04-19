@@ -12,12 +12,12 @@ public class WaveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_wave);
-//        findViewById(R.id.tv_xiu).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ((WaveView)findViewById(R.id.waveview)).playWave();
-//            }
-//        });
+        setContentView(R.layout.activity_wave);
+        findViewById(R.id.tv_xiu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((WaveView)findViewById(R.id.waveview)).playWave();
+            }
+        });
     }
 }

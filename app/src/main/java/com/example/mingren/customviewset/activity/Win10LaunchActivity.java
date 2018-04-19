@@ -10,6 +10,6 @@ public class Win10LaunchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_win10_launch);
+        setContentView(R.layout.activity_win10_launch);
     }
 }

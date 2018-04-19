@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "bundles": [
+    {
+      "uri": "carefree",
+      "pkg": "com.example.mysmall.appcarefree",
+      "rules": {
+        "page": ".MainActivity"
+      }
+    }
+  ]
+}

@@ -37,7 +37,7 @@
         <item name="android:windowExitAnimation">@anim/shrink_fade_out_from_bottom</item>
     </style>
 
-    <style name="AnimationFromBottom" >
+    <style name="AnimationFromBottom">
         <item name="android:windowEnterAnimation">@anim/popup_form_bottom</item>
         <item name="android:windowExitAnimation">@anim/drop_down_to_bottom</item>
     </style>
@@ -45,5 +45,22 @@
     <style name="AnimationFromTop">
         <item name="android:windowEnterAnimation">@anim/drop_down_from_top</item>
         <item name="android:windowExitAnimation">@anim/hide_to_top</item>
+    </style>
+
+    <style name="item_divider_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54px</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/gray</item>
+        <item name="android:paddingLeft">@dimen/item_margin_30px</item>
+    </style>
+
+    <style name="style_btn_submit_rect_blue">
+        <item name="android:layout_width">640px</item>
+        <item name="android:layout_height">96px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_btn_rect</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 </resources>

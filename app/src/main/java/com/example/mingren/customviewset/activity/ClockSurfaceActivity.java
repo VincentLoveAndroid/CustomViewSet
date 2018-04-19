@@ -10,6 +10,6 @@ public class ClockSurfaceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_clock_surface);
+        setContentView(R.layout.activity_clock_surface);
     }
 }

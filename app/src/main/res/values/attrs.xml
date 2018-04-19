@@ -30,4 +30,9 @@
     <declare-styleable name="CompleteInfoItemView">
         <attr name="complete_item_name" format="reference|string" />
     </declare-styleable>
+
+    <declare-styleable name="SingleTextItemView">
+        <attr name="text_left" format="reference|string" />
+        <attr name="text_right" format="reference|string" />
+    </declare-styleable>
 </resources>

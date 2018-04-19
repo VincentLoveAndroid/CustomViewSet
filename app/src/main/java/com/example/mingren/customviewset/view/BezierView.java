@@ -28,13 +28,8 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
-
 /**
- * Created by MingRen on 2016/9/24.
- */
-
-/**
- * Created by MingRen on 2016/9/24.
+ * Created by Vincent on 2018/3/1.
  * 贝塞尔曲线实现直播间泡泡效果
  */
 public class BezierView extends BaseCustomView {
