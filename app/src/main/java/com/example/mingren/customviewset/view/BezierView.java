@@ -71,12 +71,12 @@ public class BezierView extends BaseCustomView {
             mMatrix.reset();
             mMatrix.postScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
             Bitmap bitmap = null;
-            //导致性能问题
-            try {
-                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+//            //导致性能问题
+//            try {
+//                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
             if (canvas != null) canvas.drawBitmap(bitmap, bubble.x, bubble.y, mPaint);
 
         }
