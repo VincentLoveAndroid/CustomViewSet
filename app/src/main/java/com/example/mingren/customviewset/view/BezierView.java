@@ -28,6 +28,7 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
+
 /**
  * Created by Vincent on 2018/3/1.
  * 贝塞尔曲线实现直播间泡泡效果
@@ -59,6 +60,7 @@ public class BezierView extends BaseCustomView {
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+
         p0 = new Bubble(getRight() - DensityUtil.dip2px(getContext(), 50), getBottom() - DensityUtil.dip2px(getContext(), 20));
         p3 = new Bubble(getRight() - DensityUtil.dip2px(getContext(), 50), getTop() + DensityUtil.dip2px(getContext(), 30));
     }
@@ -71,13 +73,13 @@ public class BezierView extends BaseCustomView {
             mMatrix.reset();
             mMatrix.postScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
             Bitmap bitmap = null;
-//            //导致性能问题
+            //导致性能问题
 //            try {
 //                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
-            if (canvas != null) canvas.drawBitmap(bitmap, bubble.x, bubble.y, mPaint);
+            if (canvas != null) canvas.drawBitmap(bitmap, mMatrix, mPaint);
 
         }
     }

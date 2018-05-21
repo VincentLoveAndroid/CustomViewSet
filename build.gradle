@@ -12,6 +12,13 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+//
+//apply plugin: 'net.wequick.small'
+//small {
+//    aarVersion = '1.2.0-alpha6'
+//    strictSplitResources = false
+//    buildToAssets true
+//}
 
 allprojects {
     repositories {
