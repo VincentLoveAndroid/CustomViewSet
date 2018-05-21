@@ -36,7 +36,6 @@ public class Sign {
             System.out.println("finally");
             System.out.println("标签");
             System.out.println("master");
-            System.out.println("test");
         }
     }
 }   
