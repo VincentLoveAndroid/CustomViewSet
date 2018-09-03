@@ -3,22 +3,15 @@ package com.example.mingren.customviewset.view;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
-import android.graphics.Path;
 import android.graphics.PointF;
-import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.LinearInterpolator;
-import android.widget.Toast;
-
 import com.example.mingren.customviewset.Ob.Bubble;
-import com.example.mingren.customviewset.Ob.LuckyDishArc;
 import com.example.mingren.customviewset.R;
 import com.example.mingren.customviewset.Utils.DensityUtil;
 import com.example.mingren.customviewset.adapter.BezierTypeEvaluator;
@@ -70,17 +63,15 @@ public class BezierView extends BaseCustomView {
         super.onDraw(canvas);
         for (Bubble bubble : bubbleList) {
             mPaint.setAlpha(bubble.alpha);
-            mMatrix.reset();
-            mMatrix.postScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
-            Bitmap bitmap = null;
-            //导致性能问题
+            mMatrix.setScale(bubble.scaleX, bubble.scaleY); //长和宽放大缩小的比例，
+            mMatrix.postTranslate(bubble.x, bubble.y);
+            canvas.drawBitmap(bubble.picBitmap, mMatrix, mPaint);
+//            //导致性能问题
 //            try {
-//                bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
+//                Bitmap bitmap = Bitmap.createBitmap(bubble.picBitmap, 0, 0, bubble.picBitmap.getWidth(), bubble.picBitmap.getHeight(), mMatrix, true);
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
-            if (canvas != null) canvas.drawBitmap(bitmap, mMatrix, mPaint);
-
         }
     }
 
